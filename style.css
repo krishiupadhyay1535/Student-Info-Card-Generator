@@ -1,0 +1,315 @@
+/* style.css - full stylesheet for your Student Info page */
+
+/* safe box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.soft-title {
+    font-size: 45px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+
+body {
+    background: linear-gradient(120deg, #04fba5, #c9e8ff);
+}
+
+
+
+/* base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(206, 234, 225);
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #222;
+}
+
+/* page title */
+h1 {
+  text-align: center;
+  color: #222;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin: 28px 0 18px;
+}
+
+
+/* layout */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 12px;
+}
+
+/* .badge {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #0d6efd;
+    padding: 4px 10px;
+    margin: 3px;
+    border-radius: 6px;
+    font-size: 12px;
+} */
+
+
+/* form card */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 20px 20px;
+  border-radius: 14px;
+  width: 330px;
+  box-shadow: 0 8px 30px rgba(9, 30, 50, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.form-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* small hover lift */
+.form-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(9, 30, 50, 0.08);
+}
+
+/* grouping of label + control for consistent spacing */
+.form-group {
+  margin-bottom: 12px;
+}
+
+/* labels (closer to input) */
+.form-group label,
+.form-container label {
+  display: block;
+  margin-bottom: 6px; /* smaller gap so label sits near the control */
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+/* inputs full width */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="number"],
+.form-container input[type="file"],
+.form-container input[type="range"],
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  margin-top: 0;
+  padding: 10px 12px;
+  border: 1.5px solid #d7dfe8;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #222;
+  background: #fff;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+/* focus states */
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+  outline: none;
+  border-color: #1976ff;
+  box-shadow: 0 4px 18px rgba(25, 118, 255, 0.08);
+}
+
+/* make sure file input looks consistent */
+.form-container input[type="file"] {
+  padding: 8px;
+}
+
+/* range slider adjustments and mark value */
+.form-container input[type="range"] {
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e6eefb;
+  border-radius: 999px;
+  margin-top: 6px;
+  padding: 0;
+}
+
+/* range thumb */
+.form-container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #0d6efd;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px rgba(13,110,253,0.18);
+  cursor: pointer;
+}
+.form-container input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #0d6efd;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px rgba(13,110,253,0.18);
+  cursor: pointer;
+}
+
+/* group controls */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* adjust the label inside radio/checkbox group for clarity */
+.radio-group label,
+.checkbox-group label {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* marker value style */
+#markvalue {
+  display: inline-block;
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: 6px;
+}
+
+/* main action button */
+button#generatorbtn,
+button {
+  width: 100%;
+  background: linear-gradient(180deg, #0d6efd, #0069e6);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(13,110,253,0.12);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+button#generatorbtn:hover,
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(13,110,253,0.14);
+}
+
+/* card (right side) */
+.card-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 26px;
+  border-radius: 14px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(9, 30, 50, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+
+
+/* card hover */
+.card-container:hover { transform: translateY(-3px); }
+
+.Student-card p, .Student-card h2 {
+    margin: 6px 0;
+    font-family: "Poppins", sans-serif;
+}
+@keyframes fadeSlide {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.Student-card {
+    animation: fadeSlide 0.6s ease;
+}
+
+
+/* student image */
+.Student-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.Student-photo:hover {
+    box-shadow: 0 0 25px #4ea2ff80;
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+/* card text */
+#Studentcard h2 {
+  font-size: 20px;
+  color: #1d2a3a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+#Studentcard p {
+  margin: 6px 0;
+  color: #444b56;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* small bold span inside paragraph */
+#Studentcard p span {
+  font-weight: 600;
+  color: #111;
+}
+
+/* responsive behavior */
+@media (max-width: 900px) {
+  .main-container { gap: 20px; padding: 10px; }
+  .form-container, .card-container { width: 100%; max-width: 540px; }
+}
+
+/* extra small screens stack nicely */
+@media (max-width: 420px) {
+  h1 { font-size: 22px; margin-bottom: 12px; }
+  .form-container { padding: 16px; width: 100%; }
+  #markvalue { font-size: 13px; }
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.zoom-animate {
+    animation: zoomIn 0.5s ease forwards;
+}
+
+
+
+

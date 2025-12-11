@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Info</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- //CONFETTI CELEBRATION 🎉🎉 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <!-- <h1> Student Info Card</h1> -->
+     <h1 class="soft-title">Student Info Card</h1>
+
+     
+
+
+    <div class="main-container">
+        <div class="form-container">
+            <label for="name">Student Name</label>
+            <input type="text" id="name" placeholder="Enter Your Name">
+
+            <label for="roll">Roll Number</label>
+            <input type="text" id="roll" placeholder="Enter Your Roll Number">
+
+
+            <label for="email">Student Email</label>
+            <input type="email" id="email" placeholder="Enter Your email">
+
+
+            <label for="age">Student age</label>
+            <input type="number" id="age" placeholder="Enter Your age">
+
+            <label for="gender">Student gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male">Male</label>
+                <label><input type="radio" name="gender" value="female">Female</label>
+            </div>
+
+            <label for="gender">Course</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="web" value="web">Web</label>
+                <label><input type="checkbox" name="datascience" value="datascience">datascience</label>
+            </div>
+
+
+
+            <label for="marks">Marks</label>
+            <span id="markvalue">50</span>/100
+            <input type="range" id="marks" min="0" max="100" value="50" />
+
+            <!-- Add Signature Display Area in Your Card
+            <p><strong>Signature:</strong></p>
+<img id="cardSignature" 
+     style="width: 150px; height: auto; border: 1px solid #333; border-radius: 6px;">
+
+             Add Signature Display Area in Your Card ends 
+
+            canvas signaturePad
+            <label>Signature:</label>
+
+            <canvas id="signaturePad" width="250" height="120"
+                style="border: 2px solid #000; border-radius: 8px; background: #fff; margin-bottom: 10px;">
+            </canvas>
+
+            <button type="button" id="clearSign">Clear Signature</button>
+            <br><br>
+
+            canvas signaturePad  ends -->
+
+            <label for="photo">photo
+                <input type="file" id="photo" accept="image/*" />
+                <button id="generatorbtn">Generator Card</button>
+            </label>
+        </div>
+
+        <!-- Card Display -->
+
+
+
+        <div class="card-container">
+            <div class="Student-card" id="Studentcard">
+                <img src="https://picsum.photos/200" alt="Student photo" class="Student-photo" id="cardImage" />
+                <h2 id="cardname">Student Name :</h2>
+                <p id="cardroll">Roll No :</p>
+                <p id="cardEmail">Email :</p>
+                <p id="cardAge">Age :</p>
+                <p id="cardgender">Gender :</p>
+                <p id="cardcourse">Course :</p>
+                <p id="cardMarks">Marks :</p>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
